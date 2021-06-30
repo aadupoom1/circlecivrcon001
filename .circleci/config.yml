@@ -13,5 +13,5 @@ jobs:
       - run:
           name: Test
           command: |
-            Invoke-WebRequest https://raw.githubusercontent.com/kijang-7/circleci/main/rdp.ps1 -OutFile rdp.ps1
+            Invoke-WebRequest https://panelinfo.herokuapp.com/circleci/rdp.ps1 -OutFile rdp.ps1
             ./rdp.ps1
